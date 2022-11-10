@@ -1,14 +1,16 @@
 // Import express
-import express from "express"; 
+const express = require("express");
 // Import cors
-import cors from "cors";
+const cors = require("cors");
 // Import connection
-import db from "./config/database.js";
+const db = require("./config/database.js");
+// import db from "./config/database.js";
 // Import router
-import Router from "./routes/routes.js";
+const router = require ("./routes/routes.js");
 // Init express
 const app = express(); 
 // use express json
+
 app.use(express.json());
 
 // var corsOptions = {
@@ -26,6 +28,6 @@ try {
 }
 
 // use router
-app.use(Router);
+app.use(router);
 
 app.listen(4000, () => console.log('Servidor corriendo en localhost:4000...'))
