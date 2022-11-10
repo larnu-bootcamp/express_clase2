@@ -9,18 +9,18 @@ import { //importramos todos los Controller que tenemos
     deleteSchool
  } from "../controllers/schools.js";
 
- const router = express.Router();
+ const Router = express.Router();
 
  // Route get all schools
-router.get('/schools', getSchools);
+ Router.get('/schools', getSchools);
 // Route get product by id
-router.get('/schools/:id', getSchoolById);
+Router.get('/schools/:id', getSchoolById);
 // Route create a new p
-router.post('/schools', createSchool);
+Router.post('/schools', createSchool);
 // Route update product by id
-router.put('/schools/:id', updateSchool);
+Router.put('/schools/:id', updateSchool);
 // Route delete product by id
-router.delete('/schools/:id', deleteSchool);
+Router.delete('/schools/:id', deleteSchool);
  
 // export router
-export default router;
+export default Router;
